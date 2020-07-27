@@ -253,6 +253,7 @@ def translate_draftable_players(draftable):
             "name": dig(draftable, "competition", "name"),
             "starts_at": dig(draftable, "competition", "startTime"),
         },
+        "player_game_attributes": dig(draftable, "playerGameAttributes")
     }
 
 
