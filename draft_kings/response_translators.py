@@ -1,6 +1,6 @@
 from dateutil.parser import parse as parse_datetime
 
-from draft_kings.utilities import dig, translate_formatted_datetime, from_unix_milliseconds_to_datetime
+from draft_kings.utilities import dig, condense, translate_formatted_datetime, from_unix_milliseconds_to_datetime
 from draft_kings.data import SPORT_ID_TO_SPORT, Sport
 
 """
@@ -253,7 +253,7 @@ def translate_draftable_players(draftable):
             "name": dig(draftable, "competition", "name"),
             "starts_at": dig(draftable, "competition", "startTime"),
         },
-        "player_game_attributes": dig(draftable, "playerGameAttributes")
+        "player_game_attributes": condense(dig(draftable, "playerGameAttributes"), "id", "value")
     }
 
 

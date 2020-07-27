@@ -25,3 +25,11 @@ def dig(data, *key_path, transformer=identity, fallback=None):
         return transformer(nested_data)
     except KeyError:
         return fallback
+
+def condense(data, key_name, value_name):
+    result = {}
+    for item in data:
+        key = item[key_name]
+        value = item[value_name]
+        result[key] = value
+    return result
