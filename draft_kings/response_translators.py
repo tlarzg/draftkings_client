@@ -253,7 +253,8 @@ def translate_draftable_players(draftable):
             "name": dig(draftable, "competition", "name"),
             "starts_at": dig(draftable, "competition", "startTime"),
         },
-        "player_game_attributes": condense(dig(draftable, "playerGameAttributes"), "id", "value")
+        "player_game_attributes": condense(dig(draftable, "playerGameAttributes"), "id", "value"),
+        "draft_stat_attributes": condense(dig(draftable, "draftStatAttributes"), "id", "value"),
     }
 
 
