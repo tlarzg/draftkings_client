@@ -230,6 +230,7 @@ def translate_draftable_players(draftable):
         "position": dig(draftable, "position"),
         "roster_slot_id": dig(draftable, "rosterSlotId"),
         "salary": dig(draftable, "salary"),
+        "status": dig(draftable, "status"),
         "swappable": dig(draftable, "isSwappable"),
         "disabled": dig(draftable, "isDisabled"),
         "news_status": dig(draftable, "newsStatus"),
